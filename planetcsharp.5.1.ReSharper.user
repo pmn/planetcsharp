@@ -1,0 +1,45 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Views/d:Home/f:Index.cshtml" caret="87" fromTop="4" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Views/d:Home/f:CheckFeeds.cshtml" caret="111" fromTop="7" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:BlogController.cs" caret="509" fromTop="23" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:HomeController.cs" caret="206" fromTop="9" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:PostController.cs" caret="297" fromTop="12" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Web.config" caret="2514" fromTop="38" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Global.asax.cs" caret="791" fromTop="0" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="280" fromTop="6" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:FeedController.cs" caret="0" fromTop="0" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Models/f:planetcsharp.Designer.cs" caret="0" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:HomeController.cs" caret="393" fromTop="16" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Views/d:Home/f:Index.cshtml" caret="61" fromTop="2" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Web.config" caret="841" fromTop="13" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Web.config" caret="202" fromTop="6" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="ViewBag" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

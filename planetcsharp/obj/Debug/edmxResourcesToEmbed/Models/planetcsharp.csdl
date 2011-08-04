@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="planetcsharpModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="planetcsharpEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blogs" EntityType="planetcsharpModel.Blog" />
+    <EntitySet Name="Posts" EntityType="planetcsharpModel.Post" />
+    <AssociationSet Name="FK_Post_Blog" Association="planetcsharpModel.FK_Post_Blog">
+      <End Role="Blogs" EntitySet="Blogs" />
+      <End Role="Posts" EntitySet="Posts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FeedUrl" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="BlogUrl" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="LastUpdated" Type="DateTime" />
+    <Property Name="OwnerEmail" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Posts" Relationship="planetcsharpModel.FK_Post_Blog" FromRole="Blogs" ToRole="Posts" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="BlogID" Type="Int32" Nullable="false" />
+    <Property Name="PostedDate" Type="DateTime" />
+    <Property Name="CreatedAt" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Blog" Relationship="planetcsharpModel.FK_Post_Blog" FromRole="Posts" ToRole="Blogs" />
+  </EntityType>
+  <Association Name="FK_Post_Blog">
+    <End Role="Blogs" Type="planetcsharpModel.Blog" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Posts" Type="planetcsharpModel.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blogs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Posts">
+        <PropertyRef Name="BlogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

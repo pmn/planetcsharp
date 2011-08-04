@@ -1,0 +1,43 @@
+﻿@model IEnumerable<planetcsharp.Models.Post>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="sidebar">
+
+
+    <div class="subscriptions">
+        <span><b>blogs we're following:</b></span><br />
+        <ul>
+        @foreach (var blog in (IEnumerable<planetcsharp.Models.Blog>)ViewData["blogs"])
+        {
+            <li><a href="@blog.BlogUrl">@blog.Name</a></li>
+        }
+        </ul>
+    </div>
+    <hr 
+    <div class="info">
+        <span><b>suggestions?</b></span>
+        <ul>
+            <li>Twitter: <a href="http://twitter.com/planetcsharp">@@planetcsharp</a></li>
+            <li>Email: paul@pmn.org</li>
+        </ul>
+    </div>
+</div>
+
+<div id="content">
+@foreach (var post in Model)
+{
+    <div class="postitem">
+    <div class="itemhead">
+        <span class="postheading"><a href="@post.Blog.BlogUrl">@post.Blog.Name</a> &#x2014; <a href="@post.Url">@post.Title</a></span>
+        <span class="posttime">Posted at @post.PostedDate</span>
+    </div>
+
+    <span class="postbody">
+        @MvcHtmlString.Create(@post.Content)
+    </span>
+    </div>
+}
+
+</div>

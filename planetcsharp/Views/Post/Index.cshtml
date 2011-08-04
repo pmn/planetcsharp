@@ -1,0 +1,65 @@
+﻿@model IEnumerable<planetcsharp.Models.Post>
+
+@{
+    View.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Url
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Content
+        </th>
+        <th>
+            BlogID
+        </th>
+        <th>
+            PostedDate
+        </th>
+        <th>
+            CreatedAt
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+        <td>
+            @item.Url
+        </td>
+        <td>
+            @item.Title
+        </td>
+        <td>
+            @item.Content
+        </td>
+        <td>
+            @item.BlogID
+        </td>
+        <td>
+            @String.Format("{0:g}", item.PostedDate)
+        </td>
+        <td>
+            @String.Format("{0:g}", item.CreatedAt)
+        </td>
+    </tr>
+}
+
+</table>
+

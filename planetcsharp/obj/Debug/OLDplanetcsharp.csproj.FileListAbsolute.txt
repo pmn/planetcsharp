@@ -1,0 +1,7 @@
+C:\dev\old_planetcsharp\planetcsharp\bin\planetcsharp.dll
+C:\dev\old_planetcsharp\planetcsharp\bin\planetcsharp.pdb
+C:\dev\old_planetcsharp\planetcsharp\bin\System.Web.Entity.dll
+C:\dev\old_planetcsharp\planetcsharp\bin\System.Web.WebPages.dll
+C:\dev\old_planetcsharp\planetcsharp\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\old_planetcsharp\planetcsharp\obj\Debug\planetcsharp.dll
+C:\dev\old_planetcsharp\planetcsharp\obj\Debug\planetcsharp.pdb

@@ -1,0 +1,31 @@
+﻿@model planetcsharp.Models.Blog
+
+@{
+    View.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Fields</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">FeedUrl</div>
+    <div class="display-field">@Model.FeedUrl</div>
+
+    <div class="display-label">BlogUrl</div>
+    <div class="display-field">@Model.BlogUrl</div>
+
+    <div class="display-label">LastUpdated</div>
+    <div class="display-field">@String.Format("{0:g}", Model.LastUpdated)</div>
+
+    <div class="display-label">OwnerEmail</div>
+    <div class="display-field">@Model.OwnerEmail</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

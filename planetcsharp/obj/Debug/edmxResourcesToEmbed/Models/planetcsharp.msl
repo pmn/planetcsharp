@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="planetcsharpModelStoreContainer" CdmEntityContainer="planetcsharpEntities">
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="IsTypeOf(planetcsharpModel.Blog)">
+        <MappingFragment StoreEntitySet="Blogs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FeedUrl" ColumnName="FeedUrl" />
+          <ScalarProperty Name="BlogUrl" ColumnName="BlogUrl" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+          <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="IsTypeOf(planetcsharpModel.Post)">
+        <MappingFragment StoreEntitySet="Posts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="BlogID" ColumnName="BlogID" />
+          <ScalarProperty Name="PostedDate" ColumnName="PostedDate" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

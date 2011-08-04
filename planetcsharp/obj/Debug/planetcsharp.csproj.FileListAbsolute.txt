@@ -1,0 +1,22 @@
+c:\dev\planetcsharp\planetcsharp\bin\planetcsharp.dll
+c:\dev\planetcsharp\planetcsharp\bin\planetcsharp.pdb
+c:\dev\planetcsharp\planetcsharp\obj\Debug\ResolveAssemblyReference.cache
+c:\dev\planetcsharp\planetcsharp\obj\Debug\planetcsharp.dll
+c:\dev\planetcsharp\planetcsharp\obj\Debug\planetcsharp.pdb
+c:\dev\planetcsharp\planetcsharp\bin\System.Web.Entity.dll
+c:\dev\planetcsharp\planetcsharp\bin\System.Web.WebPages.dll
+C:\dev\old_planetcsharp\planetcsharp\bin\planetcsharp.dll
+C:\dev\old_planetcsharp\planetcsharp\bin\planetcsharp.pdb
+C:\dev\old_planetcsharp\planetcsharp\bin\System.Web.Entity.dll
+C:\dev\old_planetcsharp\planetcsharp\bin\System.Web.WebPages.dll
+C:\dev\old_planetcsharp\planetcsharp\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\old_planetcsharp\planetcsharp\obj\Debug\planetcsharp.dll
+C:\dev\old_planetcsharp\planetcsharp\obj\Debug\planetcsharp.pdb
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\obj\Debug\planetcsharp.dll
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\bin\planetcsharp.dll
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\bin\planetcsharp.pdb
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\bin\System.Web.Entity.dll
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\bin\System.Web.WebPages.dll
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\bin\System.Web.WebPages.xml
+C:\Users\paul\Documents\My Dropbox\dev\planetcsharp\planetcsharp\obj\Debug\planetcsharp.pdb

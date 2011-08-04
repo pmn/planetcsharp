@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="planetcsharpModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="planetcsharpModelStoreContainer">
+    <EntitySet Name="Blogs" EntityType="planetcsharpModel.Store.Blogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Posts" EntityType="planetcsharpModel.Store.Posts" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Post_Blog" Association="planetcsharpModel.Store.FK_Post_Blog">
+      <End Role="Blogs" EntitySet="Blogs" />
+      <End Role="Posts" EntitySet="Posts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Blogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FeedUrl" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="BlogUrl" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="LastUpdated" Type="datetime" Nullable="true" />
+    <Property Name="OwnerEmail" Type="varchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Posts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Url" Type="varchar" Nullable="false" MaxLength="1000" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="BlogID" Type="int" Nullable="false" />
+    <Property Name="PostedDate" Type="datetime" Nullable="true" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Post_Blog">
+    <End Role="Blogs" Type="planetcsharpModel.Store.Blogs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Posts" Type="planetcsharpModel.Store.Posts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blogs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Posts">
+        <PropertyRef Name="BlogID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
