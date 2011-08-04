@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="planetcsharpModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+<Schema Namespace="planetcsharpModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="planetcsharpModelStoreContainer">
     <EntitySet Name="Blogs" EntityType="planetcsharpModel.Store.Blogs" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Posts" EntityType="planetcsharpModel.Store.Posts" store:Type="Tables" Schema="dbo" />
@@ -12,23 +12,23 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="FeedUrl" Type="varchar" Nullable="false" MaxLength="500" />
     <Property Name="BlogUrl" Type="varchar" Nullable="false" MaxLength="500" />
-    <Property Name="LastUpdated" Type="datetime" Nullable="true" />
-    <Property Name="OwnerEmail" Type="varchar" Nullable="true" MaxLength="255" />
+    <Property Name="LastUpdated" Type="datetime" />
+    <Property Name="OwnerEmail" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Posts">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Url" Type="varchar" Nullable="false" MaxLength="1000" />
     <Property Name="Title" Type="varchar" Nullable="false" MaxLength="200" />
-    <Property Name="Content" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Content" Type="nvarchar(max)" />
     <Property Name="BlogID" Type="int" Nullable="false" />
-    <Property Name="PostedDate" Type="datetime" Nullable="true" />
+    <Property Name="PostedDate" Type="datetime" />
     <Property Name="CreatedAt" Type="datetime" Nullable="false" />
   </EntityType>
   <Association Name="FK_Post_Blog">
