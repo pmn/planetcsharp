@@ -32,6 +32,8 @@ namespace planetcsharp.Tasks
                 post.Content = string.Empty;
                 post.Title = string.Empty;
             }
+
+            db.SaveChanges();
         }
 
         public static void CheckFeed(Blog blog)

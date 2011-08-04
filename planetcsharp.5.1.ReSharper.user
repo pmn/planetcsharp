@@ -22,7 +22,7 @@
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Views/f:Web.config" caret="746" fromTop="9" />
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Web.config" caret="477" fromTop="7" />
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Global.asax.cs" caret="571" fromTop="6" />
-      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="523" fromTop="18" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="124" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:HomeController.cs" caret="393" fromTop="16" />
@@ -33,11 +33,11 @@
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Web.config" caret="857" fromTop="14" />
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:HomeController.cs" caret="289" fromTop="12" />
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Controllers/f:HomeController.cs" caret="2919" fromTop="12" />
-      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="870" fromTop="31" />
-      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="1018" fromTop="34" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="1089" fromTop="34" />
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="314" fromTop="13" />
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Web.config" caret="1388" fromTop="20" />
       <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/f:Web.config" caret="477" fromTop="7" />
+      <File id="EDA038C8-2256-4A1F-B29C-59B1E976CBD8/d:Tasks/f:FeedReader.cs" caret="1074" fromTop="20" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -61,8 +61,9 @@
       <Item value="foreach" priority="0" />
       <Item value="in" priority="0" />
       <Item value="if" priority="0" />
-      <Item value="post" priority="2" />
+      <Item value="post" priority="4" />
       <Item value="maxPostID" priority="0" />
+      <Item value="string" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:planetcsharp.Models.planetcsharpEntities">
       <Item value="Posts" priority="5" />
@@ -76,6 +77,11 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:planetcsharp.Models.Post">
       <Item value="ID" priority="2" />
+      <Item value="Content" priority="0" />
+      <Item value="Title" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="1" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
