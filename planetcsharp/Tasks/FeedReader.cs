@@ -12,8 +12,6 @@ namespace planetcsharp.Tasks
     public static class FeedReader
     {
         // Set up the planet db 
-        
-
         public static void CheckAllFeeds()
         {
             // Check all of the feeds for updates 
@@ -23,6 +21,15 @@ namespace planetcsharp.Tasks
             foreach (var blog in blogs)
             {
                 CheckFeed(blog);
+            }
+
+            // Clear out old posts so the database doesn't get too large
+            var maxPostID = db.Posts.Max(p => p.ID);
+
+            // Pretty lame, but in EF you have to loop through each entity to do a delete. 
+            foreach (var post in db.Posts.Where(post => post.ID < (maxPostID - 100)))
+            {
+                db.Posts.DeleteObject(post);
             }
         }
 
