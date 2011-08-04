@@ -26,10 +26,11 @@ namespace planetcsharp.Tasks
             // Clear out old posts so the database doesn't get too large
             var maxPostID = db.Posts.Max(p => p.ID);
 
-            // Pretty lame, but in EF you have to loop through each entity to do a delete. 
+            // Instead of removing the whole record, just remove the heavy parts of the content in order to save space
             foreach (var post in db.Posts.Where(post => post.ID < (maxPostID - 100)))
             {
-                db.Posts.DeleteObject(post);
+                post.Content = string.Empty;
+                post.Title = string.Empty;
             }
         }
 
